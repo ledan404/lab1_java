@@ -11,7 +11,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
 public class Film {
     private String title;
     private String director;
@@ -31,24 +30,24 @@ public class Film {
         if (rating < 1) {
             rating = 1;
         } else if (rating > 10) {
-                rating = 10;
-            }
-            this.rating += rating;
-            marks++;
+            rating = 10;
+        }
+        this.rating += rating;
+        marks++;
     }
 
     public double getCurrentRating(double rating) {
         return (double) rating / marks;
     }
 
-    public static void main(String... Args) {
+    public static void main(String[] Args) {
         Film[] films = new Film[4];
         films[0] = new Film();
         films[1] = new Film("Fight Club", "David Fincher", 1999, 8.8, 2155592);
         films[2] = Film.getInstance();
         films[3] = Film.getInstance();
-        for (int i = 0; i < films.length; i++) {
-            System.out.println(films[i]);
+        for (Film x : films ) {
+            System.out.println(x);
         }
     }
 }
