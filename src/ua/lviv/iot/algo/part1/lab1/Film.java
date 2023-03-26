@@ -46,8 +46,8 @@ public class Film {
         films[1] = new Film("Fight Club", "David Fincher", 1999, 8.8, 2155592);
         films[2] = Film.getInstance();
         films[3] = Film.getInstance();
-        for (Film x : films ) {
-            System.out.println(x);
+        for (Film counter : films ) {
+            System.out.println(counter);
         }
     }
 }
