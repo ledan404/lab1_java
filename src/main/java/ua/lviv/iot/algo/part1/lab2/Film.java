@@ -9,9 +9,9 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class Film extends Video {
-    private int marks;
+public class Film extends ua.lviv.iot.algo.part1.lab2.Video {
     public static Film instance;
+    private int marks;
 
     public Film(String title, String director, Integer year, int marks) {
         super(title, director, year);
@@ -24,6 +24,7 @@ public class Film extends Video {
         }
         return instance;
     }
+
     public void rate(int rating) {
         if (rating < 1) {
             rating = 1;

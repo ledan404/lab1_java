@@ -14,5 +14,4 @@ abstract class Video {
     public double getCurrentRating(double rating) {
         return rating;
     }
-
 }
