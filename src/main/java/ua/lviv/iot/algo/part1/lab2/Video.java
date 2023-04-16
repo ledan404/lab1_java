@@ -7,6 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 abstract class Video {
     private String title;
+
     private String director;
 
     private Integer year;
@@ -14,4 +15,13 @@ abstract class Video {
     public double getCurrentRating(double rating) {
         return rating;
     }
+
+    public String getHeaders() {
+        return "title, director, year";
+    }
+
+    public String toCSV() {
+        return title + ", " + director + ", " + year;
+    }
+
 }
