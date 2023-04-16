@@ -14,14 +14,14 @@ public class Clip extends Video {
 
     private int viems;
 
-    public double getCurrentRating() {return like / viems;}
-
-
-
-    public Clip(String title, String director, Integer year, String artist, int like, int viems){
+    public Clip(String title, String director, Integer year, String artist, int like, int viems) {
         super(title, director, year);
         this.viems = viems;
         this.artist = artist;
         this.like = like;
+    }
+
+    public double getCurrentRating() {
+        return like / viems;
     }
 }
