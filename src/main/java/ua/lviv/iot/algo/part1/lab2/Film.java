@@ -9,7 +9,7 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class Film extends ua.lviv.iot.algo.part1.lab2.Video {
+public class Film extends Video {
     public static Film instance;
     private int marks;
 
