@@ -37,4 +37,13 @@ public class Film extends Video {
     public double getCurrentRating(double rating) {
         return (double) rating / marks;
     }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", marks";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + marks;
+    }
 }

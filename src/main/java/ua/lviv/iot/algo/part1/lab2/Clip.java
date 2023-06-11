@@ -12,16 +12,25 @@ public class Clip extends Video {
 
     private int like;
 
-    private int viems;
+    private int views;
 
-    public Clip(String title, String director, Integer year, String artist, int like, int viems) {
+    public Clip(String title, String director, Integer year, String artist, int like, int views) {
         super(title, director, year);
-        this.viems = viems;
+        this.views = views;
         this.artist = artist;
         this.like = like;
     }
 
     public double getCurrentRating() {
-        return like / viems;
+        return like / views;
+    }
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", views, artist, like";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + "," + views + "," + artist + "," + like;
     }
 }
